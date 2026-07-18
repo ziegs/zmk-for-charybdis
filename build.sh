@@ -33,6 +33,7 @@ build_shield() {
         cd /workspace
         west init -l config
         west update
+        west zephyr-export
       fi
       cd /workspace
       west build -s zmk/app -b nice_nano_v2 --build-dir build/${shield} \
